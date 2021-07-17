@@ -1,0 +1,113 @@
+import java.util.*;
+class Main
+{
+   public static void main(String args[ ])
+   {
+     LinkedList<Integer> l=new LinkedList<Integer>( );
+     Scanner sc=new Scanner(System.in);
+     System.out.println("1.Begining Insert");
+     System.out.println("2.Ending Insert");
+     System.out.println("3.Position Insert");
+     System.out.println("4.Begining Delete");
+     System.out.println("5.Ending Delete");
+     System.out.println("6.Position Delete");
+     System.out.println("7.Display");
+     System.out.println("8.Exit");
+     do
+     {
+      System.out.println("Enter your Choice: ");  
+      int ch=sc.nextInt( );
+      switch(ch)
+      {
+        case 1:
+         System.out.println("Enter the element to be inserted at begining: ");
+         int n1=sc.nextInt( );
+         l.addFirst(n1);
+         System.out.println(l); 
+         break;
+        case 2:
+         System.out.println("Enter the element to be inserted at last: ");
+         int n2=sc.nextInt( );
+         l.addLast(n2);
+         System.out.println(l);
+         break;
+        case 3:
+         System.out.println("Enter the index number: ");
+         int n3=sc.nextInt( );
+         System.out.println("Enter the element to be added at position: ");
+         int n4=sc.nextInt( );
+         l.add(n3,n4); 
+         System.out.println(l);
+         break;
+        case 4:
+         System.out.println("the element deleted at begining: ");
+         l.removeFirst( );
+         System.out.println(l);
+         break;
+       case 5:
+         System.out.println("The element deleted at last: ");
+         l.removeLast( );
+         System.out.println(l);
+         break;
+       case 6:
+         System.out.println("Enter the position to be deleted at position: ");
+         int n5=sc.nextInt( );
+         l.remove(n5); 
+         System.out.println(l);
+         break;
+       case 7:
+        for(int i=0;i<l.size( );i++)
+        System.out.println(l.get(i)+" ");
+        break;
+      case 8: 
+        System.exit(0);
+      default:
+        System.out.println("Invalid");
+        break;
+      }
+    }while(true);
+  }
+}
+
+Output_________________________________________________________________________________
+
+1.Begining Insert
+2.Ending Insert
+3.Position Insert
+4.Begining Delete
+5.Ending Delete
+6.Position Delete
+7.Display
+8.Exit
+Enter your choice:
+1
+Enter the element to be inserted at begining:
+10
+[10]
+Enter your choice:
+2
+Enter the element to be inserted at last:
+20
+[10, 20]
+Enter your choice:
+3
+Enter the index:
+0
+Enter the element to be inserted at position:
+30
+[30, 10, 20]
+Enter your choice:
+6
+Enter the position to be deleted:
+0
+[10, 20]
+Enter your choice:
+3
+Enter the index:
+1
+Enter the element to be inserted at positon:
+40
+[10, 40, 20]
+Enter your choice:
+7
+10, 40, 20
